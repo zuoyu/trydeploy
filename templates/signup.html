@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script async="" type="text/javascript" src="/static/signup.js" ></script>
+<link rel="stylesheet" type="text/css" href="/static/default.css">
+<!-- Bootstrap core CSS -->
+<link href="/static/Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="/static/Bootstrap_files/bootstrap-theme.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="/static/Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<!-- this is the top nav bar -->
+<link href="/static/Bootstrap_files/theme.css" rel="stylesheet">
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">            
+        </button>
+         <a class="navbar-brand" href="about">About Us</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul id="welcomeitem" class="nav navbar-nav"></ul>
+       <ul id="loginbutton"class="nav navbar-nav"></ul>
+      </div><!--/.nav-collapse -->
+    </div>    
+  </nav>
+
+  <div data-role="page" id="onepage">
+    <div data-role="header" data-theme="f">
+    <h1>welcome</h1>
+  </div>
+  <div id="postbody">
+ 
+  <div id="dives" >
+       <form action="/api/authors/" method="POST" enctype="multipart/form-data">
+	<br>
+	<h2>New User Registration</h2>
+	Desired Username<input class ="in"id="username-input"type="text" placeholder="Eg. johndoeismyname">
+	Password<input id="password-input"type="password" placeholder="Consider using numbers and special characters">
+	github Username<input class="in"id = "github-input"type="text" placeholder="Eg. jdoe">
+	First Name<input class="in"id="first-name-input"type="text" placeholder="Eg. John Doe">
+  Last Name<input class="in" id="last-name-input"type="text" placeholder="Eg. John@hotmail.com">
+  E-mail <input class="in" id="email-input"type="text" placeholder="Eg. John Doe">
+	<br>
+	<button id="create-btn" type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Create Account</button>
+	</form>
+  </div>
+</div>
+
+  
+  
+
+  <div data-role="main" class="ui-content">
+    
+
+
+    </div>
+ 
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<form>
+<input type="file" id="file" />
+<button onclick='return UploadImage();'>Upload</button>
+</form>
+
+<script>
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+function UploadImage()
+{
+	var input = document.getElementById('file');
+
+	if(input.files[0] === undefined)
+	{
+		alert("You didn't select an image");
+		return false;
+	}
+
+	var extension = input.files[0].name.split('.').pop().toLowerCase()
+
+	var file = input.files[0];
+	var fr = new FileReader();
+
+	fr.onload = function()
+	{
+		data = {uploader: "{% url 'author-detail' user_id %}", file_type: extension, image_data: fr.result};
+
+		$.ajax({
+			type: "POST",
+			url: "{% url 'image-list' %}",
+			data: data,
+			success: function(){alert("Uploaded image!")},
+			dataType: "json",
+		});
+		console.log(fr.result);
+	};
+	fr.readAsDataURL(file);
+
+	return false;
+}
+</script>
+
+</body>
+</html>

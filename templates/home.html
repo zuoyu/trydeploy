@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/default.css">
+<!-- Bootstrap core CSS -->
+    <link href="/static/Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/static/Bootstrap_files/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+</head>
+<!-- this is the top nav bar -->
+    <link href="/static/Bootstrap_files/theme.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">            
+          </button>
+          <a class="navbar-brand" href="home">404 Web Project</a>
+	  <a class="navbar-brand" href="about">About Us</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="welcomeitem" class="nav navbar-nav"></ul>
+         <ul id="loginbutton"class="nav navbar-nav"></ul>
+        </div><!--/.nav-collapse -->
+      </div>    
+    </nav>
+
+
+
+
+<body>
+  <div data-role="page" id="onepage" >
+   
+    <div data-role="header" data-theme="f">
+    <h1>welcome</h1>
+  </div>
+  <div id="postbody">
+    <div data-role="content">
+            <div id="info"class="info">
+              <center><p>Looks like there isn't anything here.</p></center>
+
+          </div>
+    </div>
+
+
+    
+    <div id="connect-infor">
+      
+    </div>
+
+        <div data-demo-html="true">
+        <ul id="list_post_view"class="ui-listview ui-listview-inset" data-role="listview" data-inset="true">
+
+        </ul>
+      </div><!--/demo-html -->
+    </div>
+
+ 
+  
+
+  <div data-role="main" class="ui-content">
+    
+
+    <div data-role="popup" id="myPopupDialog" >
+
+      <div  data-role="header" >
+        <h1>Sign in</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+ 
+        <p>user name:</p><input id ="username"name="username" type="textbox" placeholder="xxxx@e-mail.com"> 
+        
+        <p>pass word:</p><input id="password"name="password" type="password" placeholder="xxxxxxxx"> 
+        <button id ="login_submit"type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow  ui-btn-c ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
+        
+      </div>
+
+      
+
+
+    </div>
+<div data-role="popup" id="myProfileDialog" >
+
+      <div  data-role="header" >
+        <h1>Edit Profile</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+ 
+        Update Username<input id="user-name-input" type="text" placeholder="Consider using numbers and special characters">
+        Update Firstname<input id="first-name-input"type="text" placeholder="Eg. jdoe">
+        Update Lastname<input id="last-name-input"type="text" placeholder="Eg.  Doe">
+	<br>
+        <button id="update_submit"type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Update</button>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow  ui-btn-c ui-icon-back ui-btn-icon-left" data-rel="back">Cancel</a>
+        
+      </div>
+</div>
+
+
+
+
+    <div data-role="popup" id="mypost" data-theme="b" >
+
+      <div  data-role="header" >
+        <h1>Post page</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <form >
+        <p>Post title:&nbsp;&nbsp;&nbsp;<input id = "title_input_style" name="text_title_input" type="textbox" > </p>
+        
+        <p>Your post content:</p><textarea id="content_input_style" name="text_content_input" cols="150" rows="3"></textarea>
+        <form action="home.html">
+        select the image that you want to post:<input type="file" name="img" multiple>
+ 
+        <center><table >
+        <tr>
+          <td>
+
+        <button type="submit" id='post_post' class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Post</button></td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+
+        <a href="#" class="ui-btn ui-corner-all ui-shadow  ui-btn-c ui-icon-back ui-btn-icon-left"data-theme="c" data-rel="back">Go Back</a>
+        </td>
+      </tr>
+    </table></center>
+    </form>
+      </div>
+      
+
+
+    </div>
+
+  <!-- this is the bottom nav bar -->
+  <div id="fot" role="contentinfo" data-role="footer" class="nav-glyphish-example ui-footer ui-bar-a">
+    <div role="navigation" data-role="navbar" class="nav-glyphish-example ui-navbar ui-mini" data-grid="d">
+    <ul class="ui-grid-d">
+      <li class="ui-block-a"><a  id="connect_home" id="chat" data-icon="home"><span class="ui-btn-inner"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li class="ui-block-d"><a id ="connect_prof"class="ui-btn ui-btn-inline ui-btn-icon-top " data-inline="true" data-theme="a" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false"  id="beer" data-icon="tag"><span class="ui-btn-inner"><span class="ui-btn-text">My Profile</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+     
+      <li  class="ui-block-c"><a class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-inline="true" data-theme="b" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false"  href="#mypost" data-rel="popup" data-position-to="window" data-transition="fade"id="skull" data-icon="edit"><span class="ui-btn-inner"><span class="ui-btn-text"><strong>POST</strong></span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+       <li class="ui-block-b"><a id="connect_net"class="ui-btn ui-btn-up-a ui-btn-down-a"  id="email" data-icon="star"><span class="ui-btn-inner"><span class="ui-btn-text">My Network</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li class="ui-block-e"><a id="connect_friends" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-inline="true" data-theme="a" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" id="coffee" data-icon="user"><span class="ui-btn-inner"><span class="ui-btn-text">Find Friends</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+
+<script async="" type="text/javascript" src="/static/controlers/follower_friends_controler.js" ></script> 
+<script async="" type="text/javascript" src="/static/controlers/load_post_controler.js" ></script> 
+<script async="" type="text/javascript" src="/static/controlers/update_controler.js" ></script>
+<script async="" type="text/javascript" src="/static/controlers/user_login_controler.js" ></script>
+<script async="" type="text/javascript" src="/static/controlers/dynamic_nav_inf_controler.js" ></script>
+<script async="" type="text/javascript" src="/static/controlers/button_click_controler.js" ></script>
+<script async="" type="text/javascript" src="/static/controlers/cookie_controler.js" ></script>
+<script async="" type="text/javascript" src="/static/home.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script async="" type="text/javascript" src="/static/home.js" ></script>
+<link rel="stylesheet" type="text/css" href="/static/default.css">
+<!-- Bootstrap core CSS -->
+    <link href="/static/Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/static/Bootstrap_files/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+</head>
+<!-- this is the top nav bar -->
+    <link href="/static/Bootstrap_files/theme.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">            
+          </button>
+          <a class="navbar-brand" href="#body1">404webdevelop</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="welcomeitem" class="nav navbar-nav"></ul>
+         <ul id="loginbutton"class="nav navbar-nav"></ul>
+        </div><!--/.nav-collapse -->
+      </div>    
+    </nav>
+
+
+
+
+<body>
+  <div data-role="page" id="onepage">
+   
+    <div data-role="header" data-theme="f">
+    <h1>welcome</h1>
+  </div>
+  <div id="postbody">
+       <form method="put">
+	<br>
+	Password<input type="password" placeholder="Consider using numbers and special characters">
+	github Username<input type="text" placeholder="Eg. jdoe">
+	Display Name<input type="text" placeholder="Eg. John Doe">
+	Change Photo<input type="file">
+	Current Photo:<img height="200px" width="200px">
+	<br>
+	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Update Profile</button>
+	</form>
+    </div>
+
+  
+  
+
+  <div data-role="main" class="ui-content">
+    
+
+    <div data-role="popup" id="myPopupDialog" >
+
+      <div  data-role="header" >
+        <h1>Sign in</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+ 
+        <p>user name:</p><input name="username" type="textbox" placeholder="xxxx@e-mail.com"> 
+        
+        <p>pass word:</p><input name="password" type="textbox" placeholder="xxxxxxxx"> 
+        <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow  ui-btn-c ui-icon-back ui-btn-icon-left" data-rel="back">Go Back</a>
+        
+      </div>
+      
+
+
+    </div>
+  <!-- this is the bottom nav bar -->
+  <div id="show">
+      <div role="navigation" data-role="navbar" class="nav-glyphish-example ui-navbar ui-mini" data-grid="d">
+    <ul class="ui-grid-d">
+      <li class="ui-block-a"><a  href="/" id="chat" data-icon="home"><span class="ui-btn-inner"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li class="ui-block-b"><a class="ui-btn ui-btn-up-a ui-btn-down-a" href="profile" id="email" data-icon="star"><span class="ui-btn-inner"><span class="ui-btn-text">Profile</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li  class="ui-block-c"><a class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-inline="true" data-theme="b" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="#mypost" data-rel="popup" data-position-to="window" data-transition="fade"id="skull" data-icon="edit"><span class="ui-btn-inner"><span class="ui-btn-text"><strong>POST</strong></span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li class="ui-block-d"><a class="ui-btn ui-btn-inline ui-btn-icon-top " data-inline="true" data-theme="a" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="posted" id="beer" data-icon="tag"><span class="ui-btn-inner"><span class="ui-btn-text">Posted</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+      <li class="ui-block-e"><a class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-inline="true" data-theme="a" data-iconpos="top" data-wrapperels="span" data-iconshadow="true" data-shadow="false" data-corners="false" href="addfriends" id="coffee" data-icon="user"><span class="ui-btn-inner"><span class="ui-btn-text">Friends</span><span class="ui-icon ui-icon-custom ui-icon-shadow">&nbsp;</span></span></a></li>
+    </ul>
+    </div>
+</div>
+</div>
+  </div>
+  
+
+
+
+
+
+
+</body>
+</html>
